@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QuoteIt!</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.css"> -->
+    <link rel="stylesheet" href="css/medium-editor.css">
+	<link rel="stylesheet" href="css/medium-theme.css">
+	<link rel="stylesheet" href="css/bootstrap-slider.css">
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+    	<div class="container">
+		  	<div class="row">
+		  		<div class="col-sm-12">
+		  			<h1>QuoteIt</h1>
+		  			<h3>A shareable pull quote image builder for the AJC</h3>
+		  		</div>
+		  	</div>
+	  	</div>
+	</header>
+  	
+    <div class="container">
+	    <div class="row">   	
+	    	<div class="col-sm-8" id="preview-box">
+	    		<div class="ajc" id="preview">
+	    			<div id="poster">
+		    			<div id="text-box">
+			    			<div class="editable" id="quote-text">
+			    				<p>“Usually Friday the 13th is a bad day. This is the best Friday the 13th we’ve ever had at UGA.”</p>
+			    			</div>
+			    			<div class="editable" id="attr-text">
+			    				<p>UGA Assistant Coach John Lilly to Macon County coach Larry Harold after high school recruit Roquan Smith chose UGA over UCLA</p>
+			    			</div>
+			    		</div>
+		    			<div id="logo">
+		    				<img src="img/ajc.png" height="75px"/>
+		    			</div>
+		    		</div>
+	    		</div>
+	    	</div>
+
+	    	<div class="col-sm-4" id="options">
+
+	    		<p>Edit the image by clicking and typing directly on the preview to the left. You can adjust the size of the text using the sliders below. When you're finished editing, click the "save my image" button and your quote image will download to your computer.</p>
+
+	    		<hr/>
+
+	    		<h4>Quote font size:</h4>
+
+	    		<input type="text" id="quote-font-size" value="" data-slider-min="20" data-slider-max="70" data-slider-step="2" data-slider-value="40" data-slider-id="quote-font-size" id="B" data-slider-tooltip="hide" />
+
+
+	    		<h4>Attribution font size:</h4>
+
+	    		<input type="text" id="attr-font-size" value="" data-slider-min="10" data-slider-max="40" data-slider-step="1" data-slider-value="20" data-slider-id="attr-font-size" id="B" data-slider-tooltip="hide" />
+
+
+
+	    		<div id="make-img">
+	    			<button class="btn btn-lg btn-default" type="submit">Save my image</button>
+	    		</div>
+
+	    	</div>
+
+	    </div>
+	</div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/medium-editor.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/bootstrap-slider.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

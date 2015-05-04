@@ -1,0 +1,11 @@
+{
+  "name": "my project",
+  "dependencies": {
+    "jquery": "2.1.3",
+    "bootstrap": "latest"
+  },
+  "devDependencies": {
+    "jasmine": "latest",
+    "sinon": "latest"
+  }
+}
