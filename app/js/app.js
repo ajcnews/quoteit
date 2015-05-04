@@ -1,36 +1,82 @@
 $poster = $('#poster');
 $preview = $('#preview');
 $save = $('#make-img button');
+$edit = $('#edit-img button');
 
 
-var processText = function(){
+var quotes = [
+    {
+        "quote": "There's always money in the banana stand.",
+        "attr": "George Bluth"
+    },
+    {
+        "quote": "Yo, Taylor, I'm really happy for you, I'ma let you finish, but Beyoncé had one of the best videos of all time!",
+        "attr": "Kanye West, interrupting Taylor Swift's acceptance speech for Best Female Video at the 2009 MTV Video Music Awards"
+    },
+    {
+        "quote": "Usually Friday the 13th is a bad day. This is the best Friday the 13th we’ve ever had at UGA.",
+        "attr": "UGA Assistant Coach John Lilly to Macon County coach Larry Harold after high school recruit Roquan Smith chose UGA over UCLA"
+    },
+    {
+        "quote": "I just wanted people to accept responsibility.",
+        "attr": "Judge Jerry Baxter, delivering sentences to convicted educators in the APS cheating trial"
+    },
+    {
+        "quote": "Annyong.",
+        "attr": "Annyong"
+    }
+];
+
+
+var nameFile = function(){
 	$text = $('#quote-text p').text();
 	var t = $text.replace(/\s+/g, '_').toLowerCase().replace(/[^a-zA-Z0-9_]+/g, '').split('_', 4).join('_');
 	
 	return t;
 };
 
+var cleanText = function() {
+	$text = $('#quote-text p').text();
+	var t = $text.replace(/\"([^\"]*)\"/gi,"&#8220;$1&#8221;");
+	$('#quote-text p').empty().append(t);
+}
+
 var savePoster = function(){
-	var filename = processText();
+	var filename = nameFile();
+	cleanText();
 	html2canvas($poster, {
 	  onrendered: function(canvas) {
-	  	$poster.remove();
+	  	$poster.hide();
 	    $preview.append(canvas);
 	    var img = canvas.toDataURL();
         var a = $("<a>").attr("href", img).attr("download", "quote-" + filename + ".png").appendTo("body");
 	  	a[0].click();
         a.remove();
+        $preview.addClass('no-edit');
 	  }
 	});
 
+	$edit.show();
 }
 
+var makePoster = function(i) {
+	$('#quote-text p').empty().append('&ldquo;'+i.quote+'&rdquo;');
+	$('#attr-text p').empty().append(i.attr);
+}
 
-$save.on('click', savePoster);
+var editPoster = function() {
+	$edit.hide();
+	$preview.removeClass('no-edit');
+	$('canvas').remove();
+	$poster.show();
+}
+
 
 
 $(function() {
 
+	$i = Math.floor(Math.random()*5);
+	makePoster(quotes[$i]);
 
 	var elements = document.querySelectorAll('.editable'),
     editor = new MediumEditor(elements, {
@@ -50,9 +96,10 @@ $(function() {
 			$('#attr-text p').css( 'font-size', attrSize.getValue() +'px');
 		});
 
+	$save.on('click', savePoster);
+	$edit.on('click', editPoster);
+
 });
-
-
 
 
 

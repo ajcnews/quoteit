@@ -43,7 +43,7 @@ header h3 {
 	position:absolute;
 	top:20px;
 	left:20px;
-	width:90%;
+	width:82%;
 }
 
 #quote-text p {
@@ -86,8 +86,23 @@ header h3 {
 	background:none;
 }
 
+.no-edit {
+	opacity:0.5;
+	cursor:pointer;
+}
 
-
+#edit-img {
+	position:absolute;
+	top:0;
+	left:0;
+	text-align:center;
+	width:100%;
+}
+#edit-img button {
+	font-family:'Boomer-Book';
+	display:none;
+	margin:200px auto 0px auto;
+}
 
 
 /* input */
