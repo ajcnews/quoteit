@@ -26,8 +26,10 @@ Once that finishes, install/update all your dependencies with the `` bowercopy `
 
 	$ grunt bowercopy
 
-Fire up the local server...
+Fire up the dev server...
 
 	$ grunt server
 
-...then check out [http://localhost:8000/](http://localhost:8000/) and go get some ice cream🍦
+...and your browser will open to [http://localhost:8000/](http://localhost:8000/).
+
+You're ready to go! Reward yourself with ice cream🍦
