@@ -104,7 +104,23 @@ module.exports = function (grunt) {
                     'app/bower/boostrap/less': 'app/styles/boostrap.css'
                 }
             }
+        },
+
+        aws: grunt.file.readJSON("config/aws.json"),
+        s3: {
+          options: {
+            accessKeyId: "<%= aws.key %>",
+            secretAccessKey: "<%= aws.secret %>",
+            bucket:"<%= aws.bucket %>"
+          },
+          build: {
+            cwd: "app/",
+            src: "**",
+            dest: "quoteit/"
+          }
         }
+
+
     });
 
     grunt.loadNpmTasks('grunt-bowercopy');
@@ -118,4 +134,7 @@ module.exports = function (grunt) {
             'watch'
         ]);
     });
+
+    grunt.registerTask('deploy', ['s3']);
+
 };
