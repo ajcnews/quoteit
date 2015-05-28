@@ -47,14 +47,16 @@ header h3 {
 }
 
 #quote-text p {
-	font-family:'PublicoText';
+	color:#000;
+	font-family:'Publico';
 	font-size:40px;
 	margin-bottom:40px;
-	line-height:1.5em;
+	line-height:1.4em;
 	outline:0px solid transparent;
 }
 
 #attr-text p {
+	color:#000;
 	line-height:1.5em;
 	font-family:'Publico-Light';
 	font-size:20px;
