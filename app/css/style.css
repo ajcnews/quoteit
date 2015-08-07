@@ -24,7 +24,6 @@ header h3 {
 	margin-left:2em;
 }
 
-
 /* preview */
 
 
@@ -69,7 +68,7 @@ header h3 {
 #logo {
 	position:absolute;
 	bottom:25px;
-	right:28px;
+	right:30px;
 }
 
 .slider.slider-horizontal {
@@ -112,7 +111,8 @@ header h3 {
 #options h4 {
 	font-family: 'Boomer-Book';
 	font-weight:normal;
-	font-size:20px;
+	font-size:18px;
+	margin:10px 0 0 0;
 }
 
 #options p {
@@ -132,4 +132,13 @@ header h3 {
 
 .themes{
 	text-align:center;
+}
+
+.logo-option {
+	cursor:pointer;
+	margin-bottom:20px;
+	text-align: center;
+}
+.logo-option:hover {
+	opacity:0.8;
 }

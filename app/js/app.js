@@ -96,6 +96,10 @@ $(function() {
 			$('#attr-text p').css( 'font-size', attrSize.getValue() +'px');
 		});
 
+	var logo = $('.logo-option').click(function(){
+		$('#logo').html($(this).html());
+	});
+
 	$save.on('click', savePoster);
 	$edit.on('click', editPoster);
 
