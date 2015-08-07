@@ -32,4 +32,4 @@ Fire up the dev server...
 
 ...and your browser will open to [http://localhost:8000/](http://localhost:8000/).
 
-You're ready to go! Reward yourself with ice cream🍦
+You're ready to go! Reward yourself with ice cream and cake🍦
