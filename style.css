@@ -1,0 +1,145 @@
+body, p {
+	font-family:'Boomer-Light';
+}
+
+header {
+	background-color:#1A1C21;
+	padding:20px 0px;
+	margin-bottom:50px;
+}
+
+header h1, header h3 {
+	font-family:'BoomerSlab-Book';
+	color:#fff;
+	margin:0;
+	line-height:1em;
+}
+header h1 {
+	font-size:60px;
+}
+header h3 {
+	font-family:'Boomer-Light';
+	font-size:27px;
+	font-weight:normal;
+	margin-left:2em;
+}
+
+/* preview */
+
+
+#preview {
+	margin:0px auto;
+	position:relative;
+	background:#fff;
+}
+
+#poster {
+	background:#fff;
+	margin-bottom: 5px;
+	border: 1px solid #ccc;
+}
+
+#text-box {
+	position:absolute;
+	top:20px;
+	left:20px;
+	width:82%;
+}
+
+#quote-text p {
+	color:#000;
+	font-family:'Publico';
+	font-size:40px;
+	margin-bottom:40px;
+	line-height:1.4em;
+	outline:0px solid transparent;
+}
+
+#attr-text p {
+	color:#000;
+	line-height:1.5em;
+	font-family:'Publico-Light';
+	font-size:20px;
+	outline:0px solid transparent;
+}
+#quote-text, #attr-text, #quote-text:focus, #attr-text:focus {
+	outline:0px solid transparent;
+}
+
+#logo {
+	position:absolute;
+	bottom:25px;
+	right:30px;
+}
+
+.slider.slider-horizontal {
+	width:100%;
+}
+
+.slider.slider-horizontal .slider-track {
+	background: #ccc;
+	height:5px;
+}
+.slider-handle {
+	width:15px;
+	height:15px;
+}
+.slider .slider-selection {
+	background:none;
+}
+
+.no-edit {
+	opacity:0.5;
+	cursor:pointer;
+}
+
+#edit-img {
+	position:absolute;
+	top:0;
+	left:0;
+	text-align:center;
+	width:100%;
+}
+#edit-img button {
+	font-family:'Boomer-Book';
+	display:none;
+	margin:200px auto 0px auto;
+}
+
+
+/* input */
+
+#options h4 {
+	font-family: 'Boomer-Book';
+	font-weight:normal;
+	font-size:18px;
+	margin:10px 0 0 0;
+}
+
+#options p {
+	font-family:'Boomer-Book';
+	line-height:1.5em;
+	font-size:16px;
+}
+
+#make-img {
+	padding-top:30px;
+	text-align:center;
+}
+#make-img button {
+	text-align:center;
+	font-family: 'Boomer-Book';
+}
+
+.themes{
+	text-align:center;
+}
+
+.logo-option {
+	cursor:pointer;
+	margin-bottom:20px;
+	text-align: center;
+}
+.logo-option:hover {
+	opacity:0.8;
+}
